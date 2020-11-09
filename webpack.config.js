@@ -5,7 +5,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(png|jpg|gif|woff|woff2|svg)$/i,
+        test: /\.(png|jpg|gif|woff|woff2)$/i,
         use: [
           {
             loader: "url-loader",
@@ -33,10 +33,10 @@ module.exports = {
   },
   output: {
     filename: "bundle.js",
-    path: path.resolve(__dirname),
+    path: path.resolve(__dirname, "dist"),
   },
   devServer: {
-    contentBase: path.join(__dirname),
+    contentBase: path.join(__dirname, "dist"),
     compress: true,
     port: 3000,
   },
