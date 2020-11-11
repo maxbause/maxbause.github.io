@@ -9,9 +9,17 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Install and Build 🔧
+      - name: Install 📦
         run: |
           npm install
+          npm run build
+
+      - name: Test 🧪
+        run: |
+          npm test
+
+      - name: Build 🔧
+        run: |
           npm run build
 
       - name: Deploy 🚀
