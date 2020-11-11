@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "My personal GitHub page",
   "main": "dist/main.js",
+  "homepage": "https://maxbause.github.io",
   "scripts": {
     "start:dev": "npx webpack serve",
     "build": "npx webpack"
