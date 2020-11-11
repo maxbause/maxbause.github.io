@@ -1,6 +1,6 @@
 import React from "react"
 import styled, { css, ThemeProps } from "styled-components"
-import { Theme, theme } from "../../../config/theme"
+import { Theme, theme } from "../../../../config/theme"
 
 type Props = {
   size: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "paragraph" | "lead" | "quote" | "muted" | "primary"
