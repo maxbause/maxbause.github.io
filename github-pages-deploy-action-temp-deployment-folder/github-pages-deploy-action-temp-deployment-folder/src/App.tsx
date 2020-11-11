@@ -3,7 +3,7 @@ import { createGlobalStyle, css, ThemeProps, ThemeProvider } from "styled-compon
 import W95FAWOFF from "../assets/font/w95fa.woff"
 import W95FAWOFF2 from "../assets/font/w95fa.woff2"
 import { theme, Theme } from "./config/theme"
-import { Typography } from "./rendering/designSystem/atoms/typography"
+import { Typography } from "./rendering/designSystem/atoms/Typography"
 
 const fonts = css`
   @font-face {
