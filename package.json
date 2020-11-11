@@ -17,7 +17,6 @@
   "bugs": {
     "url": "https://github.com/maxbause/maxbause.github.io/issues"
   },
-  "homepage": "https://github.com/maxbause/maxbause.github.io#readme",
   "dependencies": {
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
