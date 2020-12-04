@@ -6,8 +6,8 @@
   "homepage": "https://maxbause.github.io",
   "scripts": {
     "start:dev": "NODE_ENV=development bash -c 'npx webpack serve --hot --inline'",
-    "build": "NODE_ENV=producation bash -c 'npx webpack'",
-    "test": "NODE_ENV=producation bash -c 'npx jest --collectCoverage'"
+    "build": "NODE_ENV=production bash -c 'npx webpack'",
+    "test": "NODE_ENV=production bash -c 'npx jest --collectCoverage'"
   },
   "repository": {
     "type": "git",
