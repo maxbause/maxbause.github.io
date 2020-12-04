@@ -48,13 +48,6 @@ export type Theme = {
       }
     }
   }
-  window: {
-    pane: {
-      backgroundColor: string
-      borderColor: string
-      innerBorderColor: string
-    }
-  }
 }
 
 export const theme: Theme = {
@@ -105,13 +98,6 @@ export const theme: Theme = {
         muted: "300",
         primary: "300",
       },
-    },
-  },
-  window: {
-    pane: {
-      backgroundColor: "#6ac4df",
-      borderColor: "#000",
-      innerBorderColor: "#b0e7ff",
     },
   },
 }

@@ -1,0 +1,14 @@
+{
+  "editor.detectIndentation": false,
+  "editor.autoIndent": "advanced",
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "eslint.enable": true,
+  "eslint.validate": [".ts, .tsx"],
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.tslint": true,
+    "source.fixAll.stylelint": true
+  }
+}
