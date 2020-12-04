@@ -14,19 +14,19 @@ jobs:
           npm install
           npm run build
         env:
-          NODE_ENV: production
+          NODE_ENV: development
 
       - name: Test 🧪
         run: |
           npm test
         env:
-          NODE_ENV: production
+          NODE_ENV: development
 
       - name: Build 🔧
         run: |
           npm run build
         env:
-          NODE_ENV: production
+          NODE_ENV: development
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1
