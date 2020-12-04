@@ -5,9 +5,9 @@
   "main": "dist/main.js",
   "homepage": "https://maxbause.github.io",
   "scripts": {
-    "start:dev": "npx webpack serve",
-    "build": "npx webpack",
-    "test": "npx jest --collectCoverage"
+    "start:dev": "NODE_ENV=development bash -c 'npx webpack serve --hot --inline'",
+    "build": "NODE_ENV=producation bash -c 'npx webpack'",
+    "test": "NODE_ENV=producation bash -c 'npx jest --collectCoverage'"
   },
   "repository": {
     "type": "git",
