@@ -9,5 +9,6 @@ export const WindowPane = styled.div`
   width: 100%;
   height: 100%;
   background-color: ${({ theme }: StyledProps) => theme.window.pane.backgroundColor};
-  border: 0.125rem solid ${({ theme }: StyledProps) => theme.window.pane.borderColor};
+  border: 1px solid ${({ theme }: StyledProps) => theme.window.pane.borderColor};
+  box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.5);
 `

@@ -8,58 +8,31 @@ export type Theme = {
     }
     typography: {
       sizes: {
-        h1: string
-        h2: string
-        h3: string
-        h4: string
-        h5: string
-        h6: string
-        paragraph: string
-        lead: string
-        quote: string
-        muted: string
-        primary: string
+        systemDefault: string
       }
       lineHeights: {
-        h1: string
-        h2: string
-        h3: string
-        h4: string
-        h5: string
-        h6: string
-        paragraph: string
-        lead: string
-        quote: string
-        muted: string
-        primary: string
+        systemDefault: string
       }
       weights: {
-        h1: string
-        h2: string
-        h3: string
-        h4: string
-        h5: string
-        h6: string
-        paragraph: string
-        lead: string
-        quote: string
-        muted: string
-        primary: string
+        systemDefault: string
       }
     }
   }
   window: {
+    bar: {
+      borderColor: string
+      backgroundColor: string
+    }
     pane: {
       backgroundColor: string
       borderColor: string
-      innerBorderColor: string
     }
   }
 }
 
 export const theme: Theme = {
   backgrounds: {
-    default: "#008081",
+    default: "#BFBFBF",
   },
   font: {
     colors: {
@@ -67,51 +40,24 @@ export const theme: Theme = {
     },
     typography: {
       sizes: {
-        h1: "2.5rem",
-        h2: "2rem",
-        h3: "1.75rem",
-        h4: "1.5rem",
-        h5: "1.25rem",
-        h6: "1rem",
-        paragraph: "0.6rem",
-        lead: "0.9rem",
-        quote: "0.6rem",
-        muted: "0.6rem",
-        primary: "0.6rem",
+        systemDefault: "0.875rem",
       },
       lineHeights: {
-        h1: "3rem",
-        h2: "2.4rem",
-        h3: "2.1rem",
-        h4: "1.8rem",
-        h5: "1.5rem",
-        h6: "1.2rem",
-        paragraph: "1.2rem",
-        lead: "1.8rem",
-        quote: "1.2rem",
-        muted: "1.2rem",
-        primary: "1.2rem",
+        systemDefault: "1.125rem",
       },
       weights: {
-        h1: "400",
-        h2: "400",
-        h3: "400",
-        h4: "400",
-        h5: "400",
-        h6: "400",
-        paragraph: "300",
-        lead: "300",
-        quote: "300",
-        muted: "300",
-        primary: "300",
+        systemDefault: "400",
       },
     },
   },
   window: {
-    pane: {
-      backgroundColor: "#6ac4df",
+    bar: {
       borderColor: "#000",
-      innerBorderColor: "#b0e7ff",
+      backgroundColor: "#FFFFFF",
+    },
+    pane: {
+      backgroundColor: "#FFFFFF",
+      borderColor: "#000",
     },
   },
 }

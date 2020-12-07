@@ -1,15 +1,15 @@
 import React from "react"
 import { createGlobalStyle, css, ThemeProps, ThemeProvider } from "styled-components"
-import W95FAWOFF from "../assets/font/w95fa.woff"
-import W95FAWOFF2 from "../assets/font/w95fa.woff2"
+import FONT_WOFF from "../assets/font/ChiKareGo2.woff"
+import FONT_WOFF_2 from "../assets/font/ChiKareGo2.woff2"
 import { theme, Theme } from "./config/theme"
 import { Typography } from "./rendering/designSystem/atoms/typography"
 import { Window } from "./rendering/designSystem/molecule/window"
 
 const fonts = css`
   @font-face {
-    font-family: "W95FA";
-    src: url(${W95FAWOFF2}) format("woff2"), url(${W95FAWOFF}) format("woff");
+    font-family: "ChiKareGo2";
+    src: url(${FONT_WOFF_2}) format("woff2"), url(${FONT_WOFF}) format("woff");
   }
 `
 
@@ -24,7 +24,7 @@ const GlobalStyle = createGlobalStyle<ThemeProps<Theme>>`
 
   html {
     font-size: 16px;
-    font-family: "W95FA", sans;
+    font-family: "ChiKareGo2", sans;
     margin: 0 auto;
     color: ${({ theme }) => theme.font.colors.primary};
     background-color: ${({ theme }) => theme.backgrounds.default};
@@ -35,9 +35,19 @@ export const App = (): JSX.Element => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Window width={500} height={500} x={100} y={100}>
-        <Typography size="h3">Hi, I&apos;m Max!</Typography>
-        <Typography size="h4">... yep, this is still work in progress. please come pack later :)</Typography>
+      <Window title="Welcome" width={500} height={500} x={100} y={100}>
+        <Typography size="systemDefault" as="h3">
+          Hi, I&apos;m Max!
+        </Typography>
+        <Typography size="systemDefault" as="div" style={{ display: "block" }}>
+          ... yep, this is still work in progress. please come pack later :)
+          <br />
+          <br />
+          Font &quot;ChiKareGo2&quot; by{" "}
+          <a href="http://www.pentacom.jp/pentacom/bitfontmaker2/gallery/?id=3780" rel="noreferrer" target="_blank">
+            Giles Booth.
+          </a>
+        </Typography>
       </Window>
     </ThemeProvider>
   )
