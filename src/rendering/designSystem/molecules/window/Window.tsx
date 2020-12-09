@@ -11,7 +11,10 @@ type WrapperProps = {
   title?: string
 }
 
-type Props = React.HTMLAttributes<HTMLElement> & WrapperProps
+type Props = React.HTMLAttributes<HTMLElement> &
+  WrapperProps & {
+    onClose?: () => void
+  }
 
 const Wrapper = styled.div<WrapperProps>`
   position: absolute;
@@ -29,13 +32,15 @@ const WindowInner = styled.div`
   padding: 1rem;
 `
 
-export const Window = ({ title, children, ...props }: Props): JSX.Element => {
+const Window = ({ title, onClose, children, ...props }: Props): JSX.Element => {
   return (
     <Wrapper {...props}>
       <WindowPane>
-        <WindowBar title={title} />
+        <WindowBar title={title} onClose={onClose} />
         <WindowInner>{children}</WindowInner>
       </WindowPane>
     </Wrapper>
   )
 }
+
+export default Window

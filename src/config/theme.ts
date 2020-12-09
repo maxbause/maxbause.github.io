@@ -28,6 +28,10 @@ export type Theme = {
       borderColor: string
     }
   }
+  appBar: {
+    backgroundColor: string
+    borderColor: string
+  }
 }
 
 export const theme: Theme = {
@@ -40,10 +44,10 @@ export const theme: Theme = {
     },
     typography: {
       sizes: {
-        systemDefault: "0.875rem",
+        systemDefault: "1rem",
       },
       lineHeights: {
-        systemDefault: "1.125rem",
+        systemDefault: "1.35rem",
       },
       weights: {
         systemDefault: "400",
@@ -52,12 +56,16 @@ export const theme: Theme = {
   },
   window: {
     bar: {
-      borderColor: "#000",
+      borderColor: "#000000",
       backgroundColor: "#FFFFFF",
     },
     pane: {
       backgroundColor: "#FFFFFF",
-      borderColor: "#000",
+      borderColor: "#000000",
     },
+  },
+  appBar: {
+    backgroundColor: "#FFFFFF",
+    borderColor: "#000000",
   },
 }

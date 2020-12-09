@@ -2,18 +2,17 @@ import React from "react"
 import styled, { css, ThemeProps } from "styled-components"
 import { Theme, theme } from "../../../../config/theme"
 
-type Props = {
-  size: "systemDefault"
-  color?: keyof typeof theme.font.colors
-  marginBottom?: string
-} & React.HTMLAttributes<HTMLElement>
-
 type StyledProps = ThemeProps<Theme> & {
   color?: keyof typeof theme.font.colors
   marginLeft?: string
   marginRight?: string
   marginBottom?: string
 }
+
+type Props = {
+  size: "systemDefault"
+} & React.HTMLAttributes<HTMLElement> &
+  StyledProps
 
 const systemDefault = css`
   display: flex;

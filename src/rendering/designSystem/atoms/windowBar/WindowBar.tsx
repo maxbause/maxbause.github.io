@@ -56,7 +56,7 @@ const CloseButton = styled.div`
   }
 `
 
-const Title = styled.div`
+const Title = styled(Typography)`
   z-index: 1;
   position: absolute;
   background-color: ${({ theme }: StyledProps) => theme.window.bar.backgroundColor};
@@ -64,15 +64,18 @@ const Title = styled.div`
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
   padding: 0 0.5rem;
+  height: 0.875rem;
+  line-height: 0.875rem;
 `
 
 type Props = React.HTMLAttributes<HTMLElement> &
   StyledProps & {
     title?: string
+    onClose?: () => void
   }
 
 export const WindowBar = withTheme(
-  ({ title, theme, ...props }: Props): JSX.Element => {
+  ({ title, onClose, theme, ...props }: Props): JSX.Element => {
     return (
       <Wrapper {...props}>
         <Background width="100%" height="100%">
@@ -86,12 +89,8 @@ export const WindowBar = withTheme(
             style={{ fill: "transparent", stroke: theme.window.bar.backgroundColor, strokeWidth: "4px" }}
           />
         </Background>
-        <CloseButton />
-        {title ? (
-          <Title>
-            <Typography size="systemDefault">{title}</Typography>
-          </Title>
-        ) : null}
+        <CloseButton onClick={onClose} title="Close this window" />
+        {title ? <Title size="systemDefault">{title}</Title> : null}
       </Wrapper>
     )
   },
