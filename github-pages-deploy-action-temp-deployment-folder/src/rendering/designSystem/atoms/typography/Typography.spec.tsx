@@ -5,7 +5,7 @@ import { screen } from "@testing-library/dom"
 
 describe("rendering -> designSystem -> atoms -> <Typography />", () => {
   test("to render successfully", () => {
-    render(<Typography size="h1">Test title</Typography>)
+    render(<Typography size="systemDefault">Test title</Typography>)
     expect(screen.getByText("Test title")).toBeVisible()
   })
 })
